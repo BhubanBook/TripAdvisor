@@ -38,9 +38,9 @@ public class SignUpActivity extends AppCompatActivity {
 
     public void Join(View view) {
 
-        Intent intent = new Intent(SignUpActivity.this, PictureActivity.class);
-        startActivity(intent);
         UserRegistration();
+
+
 
     }
 
@@ -72,6 +72,8 @@ public class SignUpActivity extends AppCompatActivity {
                                 Log.d(TAG, "createUserWithEmail:success");
                                 FirebaseUser user = mAuth.getCurrentUser();
 
+                                Intent intent = new Intent(SignUpActivity.this, PictureActivity.class);
+                                startActivity(intent);
                             } else {
                                 // If sign in fails, display a message to the user.
                                 Log.w(TAG, "createUserWithEmail:failure", task.getException());
