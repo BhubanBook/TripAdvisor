@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "866326798045",
+    "firebase_url": "https://trip-advisor-e9154.firebaseio.com",
+    "project_id": "trip-advisor-e9154",
+    "storage_bucket": "trip-advisor-e9154.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:866326798045:android:dfef1a2a85295eec",
+        "android_client_info": {
+          "package_name": "com.kazikhaledsaif.tripadvisor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "866326798045-1r36t0ccoddhs8ivqptie1m9alfp0f2o.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.kazikhaledsaif.tripadvisor",
+            "certificate_hash": "eb9b164df72385ab0fa317373bdfe7196a2a9166"
+          }
+        },
+        {
+          "client_id": "866326798045-gfvahkqmosaq73crqn1mga3u0paalcr6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBDJFFrMKe3IxPLfS3fNejlWeswFlIMHuY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "866326798045-gfvahkqmosaq73crqn1mga3u0paalcr6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

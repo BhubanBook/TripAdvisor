@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".SignUpActivity">
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_height="80dp"
+        android:src="@drawable/travel_logo"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sing Up"
+        android:gravity="center"
+        android:textAllCaps="true"
+        android:fontFamily="sans-serif"
+        android:textSize="30sp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/signUpFullNameET"
+        android:hint="Enter your Full Name"/>
+
+    <EditText
+        android:id="@+id/signUpUserNameET"
+        android:hint="Enter your  User Name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+    <EditText
+        android:id="@+id/signUpPasswordET"
+        android:hint="Enter your Password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+    <EditText
+        android:id="@+id/signUpEmailET"
+        android:hint="Enter your Email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+    <EditText
+        android:id="@+id/signUpPhoneNumET"
+        android:hint="Enter your Contact No"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+    <EditText
+        android:id="@+id/signUpAddressET"
+        android:hint="Enter your Address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+
+
+    <Button
+        android:layout_marginTop="20dp"
+        android:text="Join"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="Join"/>
+
+
+</LinearLayout>
