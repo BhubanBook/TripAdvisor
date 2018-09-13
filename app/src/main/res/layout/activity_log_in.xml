@@ -5,78 +5,151 @@
     android:layout_width="match_parent"
     android:orientation="vertical"
     android:layout_height="match_parent"
-    tools:context=".LogInActivity">
+    tools:context=".LogInActivity"
+    android:background="#3eec6a">
 
-    <ImageView
-        android:layout_width="150dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_height="150dp"
-        android:src="@drawable/travel_logo"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Trip Advisor"
-        android:gravity="center"
-        android:textAllCaps="true"
-        android:fontFamily="sans-serif"
-        android:textSize="35sp"/>
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Enter your Username"
-        android:id="@+id/logInUserNameET"/>
-
-    <EditText
-        android:id="@+id/logInPasswordET"
-        android:hint="Enter your Password"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:text="Or"
-        android:textSize="25sp"
-        android:layout_gravity="center"
-        android:layout_height="wrap_content" />
     <LinearLayout
         android:layout_width="match_parent"
-        android:orientation="horizontal"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="10dp">
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="150dp"
+            android:src="@drawable/travel_logo"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:elevation="8dp"
+            android:background="@drawable/ic_layout_model">
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:background="@drawable/ic_layout_model"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/loginUserNameET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:inputType="text"
+                android:paddingLeft="10dp"
+                android:fontFamily="monospace"
+                android:drawableLeft="@drawable/ic_user_icon"
+                android:hint=" Enter Your Username" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/ic_layout_model">
+        <EditText
+            android:id="@+id/loginUserPasswordET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:paddingLeft="10dp"
+            android:fontFamily="monospace"
+            android:inputType="textPassword"
+            android:drawableLeft="@drawable/ic_password_icon"
+            android:hint=" Enter Your Password" />
+    </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_margin="10dp"
+            android:layout_width="wrap_content"
+            android:text="OR"
+            android:textSize="25sp"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFF"
+            android:fontFamily="monospace"
+            android:layout_marginBottom="5dp" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/googleBTN"
+                android:padding="10dp"
+                android:text="Google"
+                android:elevation="8dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:textSize="18sp"
+                android:textColor="#181717"
+                android:layout_marginRight="10dp"
+                android:textAllCaps="false"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:background="@drawable/ic_google_button"
+                android:drawableLeft="@drawable/ic_google_icon" />
+
+            <Button
+                android:id="@+id/facebookBTN"
+                android:text="facebook"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:background="@drawable/ic_facebook_button"
+                android:padding="10dp"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:textAllCaps="false"
+                android:textSize="18sp"
+                android:layout_marginRight="10dp"
+                android:textColor="#ffff"
+                android:drawableLeft="@drawable/ic_facebook_icon"/>
+
+        </LinearLayout>
+
+
 
         <Button
+            android:id="@+id/loginBTN"
+            android:background="@drawable/ic_button_madel_1"
+            android:layout_marginTop="40dp"
+            android:text="Log in"
             android:padding="10dp"
-            android:text="Google"
-            android:layout_width="0dp"
-            android:layout_weight="1"
+            android:textSize="18sp"
+            android:textColor="#3eec6a"
+            android:fontFamily="monospace"
+            android:textAllCaps="false"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content" />
-
         <Button
-            android:text="facebook"
-
+            android:id="@+id/creataAccountBTN"
+            android:background="@drawable/ic_button_madel_2"
+            android:layout_marginTop="5dp"
+            android:text="Create New Account"
             android:padding="10dp"
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content" />
-
+            android:textSize="18sp"
+            android:textAllCaps="false"
+            android:textColor="#ffffff"
+            android:fontFamily="serif"
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="createNewAccount"/>
 
     </LinearLayout>
 
-    <Button
-        android:layout_marginTop="20dp"
-        android:text="Log in"
-        android:padding="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
 
-
-
-    <Button
-        android:layout_marginTop="20dp"
-        android:text="Create New Account"
-        android:padding="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="createNewAccount"/>
 </LinearLayout>

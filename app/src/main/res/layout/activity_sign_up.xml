@@ -5,69 +5,159 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/ic_background_img"
     tools:context=".SignUpActivity">
 
-    <ImageView
-        android:layout_width="150dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_height="80dp"
-        android:src="@drawable/travel_logo"/>
+
     <TextView
+        android:layout_marginTop="30dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Sing Up"
+        android:text="Create Account"
         android:gravity="center"
-        android:textAllCaps="true"
-        android:fontFamily="sans-serif"
+        android:textAllCaps="false"
+        android:textColor="#ffffff"
+        android:fontFamily="serif-monospace"
+        android:textStyle="bold"
         android:textSize="30sp"/>
 
-    <EditText
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/signUpFullNameET"
-        android:hint="Enter your Full Name"/>
+        android:background="@drawable/ic_layout_model"
+        android:orientation="vertical"
+        android:layout_marginTop="25dp"
+        android:layout_marginRight="10dp"
+        android:paddingLeft="10dp"
+        android:elevation="8dp"
+        android:layout_marginLeft="10dp">
 
-    <EditText
-        android:id="@+id/signUpUserNameET"
-        android:hint="Enter your  User Name"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        />
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/ic_layout_model"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/signUpFullNameET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:inputType="text"
+                android:paddingLeft="10dp"
+                android:fontFamily="monospace"
+                android:hint="Full Name" />
+        </android.support.design.widget.TextInputLayout>
 
-    <EditText
-        android:id="@+id/signUpPasswordET"
-        android:hint="Enter your Password"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        />
-    <EditText
-        android:id="@+id/signUpEmailET"
-        android:hint="Enter your Email"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        />
-    <EditText
-        android:id="@+id/signUpPhoneNumET"
-        android:hint="Enter your Contact No"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        />
-    <EditText
-        android:id="@+id/signUpAddressET"
-        android:hint="Enter your Address"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        />
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:background="@drawable/ic_layout_model"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/signUpUserNameET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:inputType="text"
+                android:paddingLeft="10dp"
+                android:fontFamily="monospace"
+                android:hint="User Name" />
+        </android.support.design.widget.TextInputLayout>
 
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:background="@drawable/ic_layout_model"
+            android:layout_marginBottom="5dp"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/signUpEmailET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:inputType="textEmailAddress"
+                android:paddingLeft="10dp"
+                android:fontFamily="monospace"
+                android:hint="E-mail" />
+        </android.support.design.widget.TextInputLayout>
+
+     </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_layout_model"
+            android:orientation="vertical"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="10dp"
+            android:paddingLeft="10dp"
+            android:elevation="8dp"
+            android:layout_marginLeft="10dp">
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/ic_layout_model"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/signUpPasswordET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:inputType="textPassword"
+                android:paddingLeft="10dp"
+                android:fontFamily="monospace"
+                android:hint="Password" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:background="@drawable/ic_layout_model"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/signUpPhoneNumET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:inputType="numberDecimal"
+                android:paddingLeft="10dp"
+                android:fontFamily="monospace"
+                android:hint="Phone Number" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:background="@drawable/ic_layout_model"
+            android:layout_height="80dp">
+            <EditText
+                android:id="@+id/signUpAddressET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:inputType="textMultiLine"
+                android:paddingLeft="10dp"
+                android:fontFamily="monospace"
+                android:hint="Address" />
+        </android.support.design.widget.TextInputLayout>
+
+    </LinearLayout>
 
 
     <Button
+        android:id="@+id/joinBTN"
+        android:background="@drawable/ic_button_madel_3"
         android:layout_marginTop="20dp"
+        android:elevation="8dp"
         android:text="Join"
         android:padding="10dp"
+        android:textSize="18sp"
+        android:textColor="#FFFF"
+        android:textStyle="bold"
+        android:fontFamily="monospace"
+        android:textAllCaps="false"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:clickable="true"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="Join"/>
-
+        android:layout_height="wrap_content" />
 
 </LinearLayout>
