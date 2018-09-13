@@ -1,29 +1,21 @@
 {
   "project_info": {
-    "project_number": "866326798045",
-    "firebase_url": "https://trip-advisor-e9154.firebaseio.com",
-    "project_id": "trip-advisor-e9154",
-    "storage_bucket": "trip-advisor-e9154.appspot.com"
+    "project_number": "1049619641427",
+    "firebase_url": "https://tripadvisor-44487.firebaseio.com",
+    "project_id": "tripadvisor-44487",
+    "storage_bucket": "tripadvisor-44487.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:866326798045:android:dfef1a2a85295eec",
+        "mobilesdk_app_id": "1:1049619641427:android:dfef1a2a85295eec",
         "android_client_info": {
           "package_name": "com.kazikhaledsaif.tripadvisor"
         }
       },
       "oauth_client": [
         {
-          "client_id": "866326798045-1r36t0ccoddhs8ivqptie1m9alfp0f2o.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.kazikhaledsaif.tripadvisor",
-            "certificate_hash": "eb9b164df72385ab0fa317373bdfe7196a2a9166"
-          }
-        },
-        {
-          "client_id": "866326798045-hcdi6vg9d0cfc6qkp4athhc961ccim0k.apps.googleusercontent.com",
+          "client_id": "1049619641427-jm2a0jfm1jvgr0gu6iem8an5lnct8ghj.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.kazikhaledsaif.tripadvisor",
@@ -31,13 +23,16 @@
           }
         },
         {
-          "client_id": "866326798045-gfvahkqmosaq73crqn1mga3u0paalcr6.apps.googleusercontent.com",
+          "client_id": "1049619641427-iok3hn74du1tcvjipdcqm2crjqak51h0.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBDJFFrMKe3IxPLfS3fNejlWeswFlIMHuY"
+          "current_key": "AIzaSyDeNDCtpF8lziWZeR5Ym3yOVHqEswbkq3I"
+        },
+        {
+          "current_key": "AIzaSyDY3nik9EFqXr1Yz3KqPcC2w_TciHVueYg"
         }
       ],
       "services": {
@@ -48,7 +43,7 @@
           "status": 2,
           "other_platform_oauth_client": [
             {
-              "client_id": "866326798045-gfvahkqmosaq73crqn1mga3u0paalcr6.apps.googleusercontent.com",
+              "client_id": "1049619641427-iok3hn74du1tcvjipdcqm2crjqak51h0.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

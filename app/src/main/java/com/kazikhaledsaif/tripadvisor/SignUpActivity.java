@@ -18,7 +18,7 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class SignUpActivity extends AppCompatActivity {
 
-    private EditText mFullNameET,mUserNameET,mPasswordET,mAddressET,mPhoneNumbET,mEmailET;
+    private EditText mPasswordET,mEmailET;
     private String TAG = "Firebase";
     private FirebaseAuth mAuth;
     @Override
@@ -26,46 +26,31 @@ public class SignUpActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
         mAuth = FirebaseAuth.getInstance();
-        mFullNameET = findViewById(R.id.signUpFullNameET);
-        mUserNameET = findViewById(R.id.signUpUserNameET);
         mPasswordET = findViewById(R.id.signUpPasswordET);
-        mAddressET = findViewById(R.id.signUpAddressET);
-        mPhoneNumbET = findViewById(R.id.signUpPhoneNumET);
         mEmailET = findViewById(R.id.signUpEmailET);
 
 
     }
 
-    @Override
-    public void onStart() {
-        super.onStart();
-        // Check if user is signed in (non-null) and update UI accordingly.
-        FirebaseUser currentUser = mAuth.getCurrentUser();
 
-    }
     public void Join(View view) {
 
-        UserRegistration();
-
-
-
-    }
-
-    private void UserRegistration() {
-        String fullName= mFullNameET.getText().toString();
-        String userName= mUserNameET.getText().toString();
         String password= mPasswordET.getText().toString();
-        String address= mAddressET.getText().toString();
+
         String email= mEmailET.getText().toString();
-        String phoneNum= mPhoneNumbET.getText().toString();
 
         if(TextUtils.isEmpty(email)){
             mEmailET.setError("Email is Empty");
             return;
         }
-        if(TextUtils.isEmpty(password)){
+         if(TextUtils.isEmpty(password)){
 
             mPasswordET.setError("Password is Empty");
+            return;
+        }
+        if(password.length()<6){
+
+            mPasswordET.setError("Password must be 6 digit");
             return;
         }
 
@@ -76,14 +61,15 @@ public class SignUpActivity extends AppCompatActivity {
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful()) {
                                 // Sign in success, update UI with the signed-in user's information
-                                Log.d(TAG, "createUserWithEmail:success");
-                                FirebaseUser user = mAuth.getCurrentUser();
+                                Log.e(TAG, "createUserWithEmail:success");
 
-                                Intent intent = new Intent(SignUpActivity.this, PictureActivity.class);
+                                FirebaseUser user = mAuth.getCurrentUser();
+                               Intent intent = new Intent(SignUpActivity.this, ProfileActivity.class);
+                                finish();
                                 startActivity(intent);
                             } else {
                                 // If sign in fails, display a message to the user.
-                                Log.w(TAG, "createUserWithEmail:failure", task.getException());
+                                Log.e(TAG, "createUserWithEmail:failure", task.getException());
                                 Toast.makeText(SignUpActivity.this, "Authentication failed.",
                                         Toast.LENGTH_SHORT).show();
 
@@ -93,5 +79,8 @@ public class SignUpActivity extends AppCompatActivity {
                         }
                     });
         }
+
+
     }
+
 }

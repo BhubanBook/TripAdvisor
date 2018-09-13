@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PictureActivity"
+    tools:context=".ProfileActivity"
     android:orientation="vertical">
 
     <Button
@@ -17,6 +17,7 @@
         android:background="@drawable/ic_button_madel_4"
         android:textColor="#FFFF"
         android:textStyle="bold"
+        android:onClick="Skip"
         android:foreground="?android:attr/selectableItemBackground"
         android:clickable="true"
         android:text="Skip"/>
