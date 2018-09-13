@@ -23,6 +23,14 @@
           }
         },
         {
+          "client_id": "866326798045-hcdi6vg9d0cfc6qkp4athhc961ccim0k.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.kazikhaledsaif.tripadvisor",
+            "certificate_hash": "d749b144ee809369751aeee944da7d29eee8cdeb"
+          }
+        },
+        {
           "client_id": "866326798045-gfvahkqmosaq73crqn1mga3u0paalcr6.apps.googleusercontent.com",
           "client_type": 3
         }
