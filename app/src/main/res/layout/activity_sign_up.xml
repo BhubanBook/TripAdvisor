@@ -38,6 +38,7 @@
             android:layout_width="match_parent"
             android:background="@drawable/ic_layout_model"
             android:layout_marginBottom="5dp"
+            android:layout_marginTop="10dp"
             android:layout_height="wrap_content">
             <EditText
                 android:id="@+id/signUpEmailET"
