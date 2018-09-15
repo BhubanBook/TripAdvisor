@@ -89,6 +89,8 @@ public class DashboardActivity extends AppCompatActivity {
     public void dialog_Messenger(){
 
 
+        //comment
+
         mDialog.setContentView(R.layout.dialogbox);
 
 
