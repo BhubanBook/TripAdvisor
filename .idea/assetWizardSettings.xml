@@ -18,7 +18,7 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="url" value="jar:file:/F:/Android%20Stdio/AndroidStdio/plugins/android/lib/android.jar!/images/material_design_icons/maps/ic_local_hospital_black_24dp.xml" />
+                                      <entry key="url" value="jar:file:/F:/Android%20Stdio/AndroidStdio/plugins/android/lib/android.jar!/images/material_design_icons/action/ic_date_range_black_24dp.xml" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -29,8 +29,8 @@
                         <option name="values">
                           <map>
                             <entry key="color" value="91dc5a" />
-                            <entry key="outputName" value="ic_local_hospital" />
-                            <entry key="sourceFile" value="E:\icone\credit-card.svg" />
+                            <entry key="outputName" value="ic_calender_icon" />
+                            <entry key="sourceFile" value="C:\Users\PARVE" />
                           </map>
                         </option>
                       </PersistentState>

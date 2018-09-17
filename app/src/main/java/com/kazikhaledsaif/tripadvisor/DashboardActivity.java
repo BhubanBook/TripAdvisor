@@ -18,7 +18,7 @@ public class DashboardActivity extends AppCompatActivity {
 
     private FirebaseAuth mAuth;
     ViewFlipper viewFlipper;
-    LinearLayout mNearBy;
+    LinearLayout mNearBy, mTravelEvent;
     Dialog mDialog ;
 
     @Override
@@ -28,6 +28,7 @@ public class DashboardActivity extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
 
         mNearBy = findViewById(R.id.nearbyBTN);
+        mTravelEvent = findViewById(R.id.travelEventBTN);
 
         mDialog=new Dialog(this);
         int images[] ={ R.drawable.bich, R.drawable.hotel, R.drawable.hilli, R.drawable.del, R.drawable.wallhaven};
@@ -47,6 +48,22 @@ public class DashboardActivity extends AppCompatActivity {
                 dialog_Messenger();
             }
         });
+
+
+        mTravelEvent.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(DashboardActivity.this, AddTravelEventActivity.class);
+                finish();
+                startActivity(intent);
+
+            }
+        });
+
+
+
+
 
 
     }

@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".DashboardActivity">
 
-<!--
     <ImageView
         android:id="@+id/backgroundIMG"
         android:layout_width="match_parent"
@@ -299,7 +298,6 @@
     </LinearLayout>
 
 
-    -->
 
 
 
@@ -364,7 +362,7 @@
                     android:textColor="#000"
                     android:textSize="15sp" />
 
-            </LinearLayout>
+              </LinearLayout>
 
         </LinearLayout>
         <LinearLayout
