@@ -84,7 +84,7 @@
             <Button
                 android:id="@+id/googleBTN"
                 android:padding="10dp"
-                android:onClick="SignInWithApp"
+                android:onClick="logWithGoogle"
                 android:text="Google"
                 android:elevation="8dp"
                 android:layout_width="0dp"

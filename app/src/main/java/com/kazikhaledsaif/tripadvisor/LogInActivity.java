@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -23,6 +24,7 @@ public class LogInActivity extends AppCompatActivity {
     private String TAG = "Firebase";
     private FirebaseAuth mAuth;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +32,10 @@ public class LogInActivity extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         mPasswordET = findViewById(R.id.loginPasswordET);
         mEmailET = findViewById(R.id.loginEmailET);
+
+
+
+
 
     }
     @Override
@@ -102,6 +108,12 @@ public class LogInActivity extends AppCompatActivity {
 
     }
 
-    public void SignInWithApp(View view) {
+    public void logWithGoogle(View view) {
+    }
+
+    public void logWithFacebook(View view) {
+
+
+
     }
 }

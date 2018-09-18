@@ -1,325 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DashboardActivity">
+    tools:context=".DashboardActivity"
+    tools:layout_editor_absoluteY="25dp">
 
-    <ImageView
-        android:id="@+id/backgroundIMG"
-        android:layout_width="match_parent"
-        android:layout_height="240dp"
-        android:src="@drawable/bich"
-        android:background="#2dd2ba"/>
 
-    <Button
+    <!--<Button
         android:id="@+id/skipBTN"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentTop="true"
         android:layout_gravity="right"
-        android:layout_marginEnd="18dp"
-        android:layout_marginTop="12dp"
         android:background="@drawable/ic_button_madel_4"
         android:clickable="true"
         android:foreground="?android:attr/selectableItemBackground"
         android:onClick="signOut"
         android:text="Sign Out"
         android:textColor="#FFFF"
-        android:textStyle="bold" />
-
-    <LinearLayout
-        android:id="@+id/buttonPanls"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:elevation="2dp"
-        android:layout_marginBottom="1dp"
-        android:layout_below="@id/backgroundIMG">
-
-        <LinearLayout
-
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="120dp"
-            android:gravity="center"
-            android:clickable="true"
-            android:elevation="2dp"
-            android:layout_marginRight="1dp"
-            android:foreground="?android:attr/selectableItemBackground"
-            android:background="@drawable/ic_layout_model_2">
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:layout_gravity="center_horizontal|center_vertical"
-                android:orientation="vertical">
-
-
-                <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginBottom="10dp"
-                    android:padding="5dp"
-                    android:src="@drawable/ic_nearby" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="monospace"
-                    android:text="Near By"
-                    android:textAlignment="center"
-                    android:textAllCaps="false"
-                    android:textColor="#000"
-                    android:textSize="15sp" />
-
-            </LinearLayout>
-
-        </LinearLayout>
-
-        <LinearLayout
-
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="120dp"
-            android:gravity="center"
-            android:clickable="true"
-            android:elevation="2dp"
-            android:layout_marginRight="1dp"
-            android:foreground="?android:attr/selectableItemBackground"
-            android:background="@drawable/ic_layout_model_2">
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:layout_gravity="center_horizontal|center_vertical"
-                android:orientation="vertical">
-
-
-                <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginBottom="10dp"
-                    android:padding="5dp"
-                    android:src="@drawable/ic_travel_event" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="monospace"
-                    android:text="Travel Event"
-                    android:textAlignment="center"
-                    android:textAllCaps="false"
-                    android:textColor="#000"
-                    android:textSize="15sp" />
-
-            </LinearLayout>
-
-        </LinearLayout>
-
-        <LinearLayout
-
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="120dp"
-            android:gravity="center"
-            android:clickable="true"
-            android:elevation="2dp"
-            android:foreground="?android:attr/selectableItemBackground"
-            android:background="@drawable/ic_layout_model_2">
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:layout_gravity="center_horizontal|center_vertical"
-                android:orientation="vertical">
-
-
-                <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginBottom="3dp"
-                    android:padding="5dp"
-                    android:src="@drawable/ic_travelexpense_icon" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="monospace"
-                    android:text="Travel Expense "
-                    android:textAlignment="center"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginRight="5dp"
-                    android:textAllCaps="false"
-                    android:textColor="#000"
-                    android:textSize="15sp" />
-
-            </LinearLayout>
-
-        </LinearLayout>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/buttonPanls_2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:elevation="2dp"
-        android:background="@drawable/ic_layout_model"
-        android:layout_below="@id/buttonPanls">
-
-        <LinearLayout
-
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="120dp"
-            android:gravity="center"
-            android:clickable="true"
-            android:elevation="2dp"
-            android:layout_marginRight="1dp"
-            android:foreground="?android:attr/selectableItemBackground"
-            android:background="@drawable/ic_layout_model_2">
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:layout_gravity="center_horizontal|center_vertical"
-                android:orientation="vertical">
-
-
-                <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginBottom="5dp"
-                    android:padding="5dp"
-                    android:src="@drawable/ic_camera_icon2" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="monospace"
-                    android:text="Travel MomentNear"
-                    android:textAlignment="center"
-                    android:textAllCaps="false"
-                    android:textColor="#000"
-                    android:textSize="15sp" />
-
-            </LinearLayout>
-
-        </LinearLayout>
-        <LinearLayout
-
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="120dp"
-            android:gravity="center"
-            android:clickable="true"
-            android:elevation="2dp"
-            android:layout_marginRight="1dp"
-            android:foreground="?android:attr/selectableItemBackground"
-            android:background="@drawable/ic_layout_model_2">
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:layout_gravity="center_horizontal|center_vertical"
-                android:orientation="vertical">
-
-
-                <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginBottom="10dp"
-                    android:padding="5dp"
-                    android:src="@drawable/ic_weather_icon" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="monospace"
-                    android:text="Weather"
-                    android:textAlignment="center"
-                    android:textAllCaps="false"
-                    android:textColor="#000"
-                    android:textSize="15sp" />
-
-            </LinearLayout>
-
-        </LinearLayout>
-        <LinearLayout
-
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="120dp"
-            android:gravity="center"
-            android:clickable="true"
-            android:elevation="2dp"
-            android:foreground="?android:attr/selectableItemBackground"
-            android:background="@drawable/ic_layout_model_2">
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:layout_gravity="center_horizontal|center_vertical"
-                android:orientation="vertical">
-
-
-                <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginBottom="10dp"
-                    android:padding="5dp"
-                    android:src="@drawable/ic_user_icon" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="monospace"
-                    android:text="Profile"
-                    android:textAlignment="center"
-                    android:textAllCaps="false"
-                    android:textColor="#000"
-                    android:textSize="15sp" />
-
-            </LinearLayout>
-
-        </LinearLayout>
-
-
-    </LinearLayout>
-
-
-
-
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="307dp"
+        tools:layout_editor_absoluteY="16dp" />-->
 
     <ViewFlipper
         android:id="@+id/backgroundimgViewer"
         android:layout_width="match_parent"
-        android:layout_height="240dp"
+        android:layout_height="220dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/bich"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-        android:layout_centerHorizontal="true">
     </ViewFlipper>
-    
 
     <GridLayout
         android:id="@+id/grid"
-        android:layout_below="@id/backgroundimgViewer"
         android:layout_width="match_parent"
-        android:layout_height="280dp"
-        android:columnCount="3"
-        android:rowCount="2"
+        android:layout_height="265dp"
+        android:layout_below="@id/backgroundimgViewer"
         android:alignmentMode="alignMargins"
+        android:columnCount="3"
         android:columnOrderPreserved="false"
-        android:layout_marginBottom="100dp">
+        android:rowCount="2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/backgroundimgViewer">
 
 
         <LinearLayout
@@ -328,14 +57,15 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_columnWeight="1"
+            android:layout_marginBottom="1dp"
+            android:layout_marginRight="1dp"
             android:layout_rowWeight="1"
-            android:gravity="center"
+            android:background="@drawable/ic_layout_model_2"
             android:clickable="true"
             android:elevation="2dp"
-            android:layout_marginRight="1dp"
-            android:layout_marginBottom="1dp"
             android:foreground="?android:attr/selectableItemBackground"
-            android:background="@drawable/ic_layout_model_2">
+            android:gravity="center">
+
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -362,23 +92,25 @@
                     android:textColor="#000"
                     android:textSize="15sp" />
 
-              </LinearLayout>
+            </LinearLayout>
 
         </LinearLayout>
+
         <LinearLayout
 
             android:id="@+id/travelEventBTN"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_columnWeight="1"
-            android:layout_rowWeight="1"
-            android:gravity="center"
-            android:clickable="true"
             android:layout_marginBottom="1dp"
-            android:elevation="2dp"
             android:layout_marginRight="1dp"
+            android:layout_rowWeight="1"
+            android:background="@drawable/ic_layout_model_2"
+            android:clickable="true"
+            android:elevation="2dp"
             android:foreground="?android:attr/selectableItemBackground"
-            android:background="@drawable/ic_layout_model_2">
+            android:gravity="center">
+
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -408,19 +140,21 @@
             </LinearLayout>
 
         </LinearLayout>
+
         <LinearLayout
 
             android:id="@+id/travelExpenseBTN"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_columnWeight="1"
+            android:layout_marginBottom="1dp"
             android:layout_rowWeight="1"
-            android:gravity="center"
+            android:background="@drawable/ic_layout_model_2"
             android:clickable="true"
             android:elevation="2dp"
-            android:layout_marginBottom="1dp"
             android:foreground="?android:attr/selectableItemBackground"
-            android:background="@drawable/ic_layout_model_2">
+            android:gravity="center">
+
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -440,11 +174,11 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
                     android:fontFamily="monospace"
                     android:text="Travel Expense "
                     android:textAlignment="center"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginRight="5dp"
                     android:textAllCaps="false"
                     android:textColor="#000"
                     android:textSize="15sp" />
@@ -459,14 +193,15 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_columnWeight="1"
-            android:layout_rowWeight="1"
-            android:gravity="center"
-            android:clickable="true"
             android:layout_marginBottom="1dp"
-            android:elevation="2dp"
             android:layout_marginRight="1dp"
+            android:layout_rowWeight="1"
+            android:background="@drawable/ic_layout_model_2"
+            android:clickable="true"
+            android:elevation="2dp"
             android:foreground="?android:attr/selectableItemBackground"
-            android:background="@drawable/ic_layout_model_2">
+            android:gravity="center">
+
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -496,20 +231,22 @@
             </LinearLayout>
 
         </LinearLayout>
+
         <LinearLayout
 
             android:id="@+id/weatherBTN"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_columnWeight="1"
-            android:layout_rowWeight="1"
-            android:gravity="center"
-            android:clickable="true"
             android:layout_marginBottom="1dp"
-            android:elevation="2dp"
             android:layout_marginRight="1dp"
+            android:layout_rowWeight="1"
+            android:background="@drawable/ic_layout_model_2"
+            android:clickable="true"
+            android:elevation="2dp"
             android:foreground="?android:attr/selectableItemBackground"
-            android:background="@drawable/ic_layout_model_2">
+            android:gravity="center">
+
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -539,18 +276,20 @@
             </LinearLayout>
 
         </LinearLayout>
+
         <LinearLayout
 
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_columnWeight="1"
-            android:layout_rowWeight="1"
-            android:gravity="center"
-            android:clickable="true"
             android:layout_marginBottom="1dp"
+            android:layout_rowWeight="1"
+            android:background="@drawable/ic_layout_model_2"
+            android:clickable="true"
             android:elevation="2dp"
             android:foreground="?android:attr/selectableItemBackground"
-            android:background="@drawable/ic_layout_model_2">
+            android:gravity="center">
+
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -584,7 +323,21 @@
 
     </GridLayout>
 
-<!--
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <!--
     <LinearLayout
         android:id="@+id/fragmentBTN"
         android:layout_width="match_parent"
@@ -717,4 +470,4 @@
     </LinearLayout>
 
     -->
-</RelativeLayout>
+</android.support.constraint.ConstraintLayout>

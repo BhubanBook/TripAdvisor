@@ -54,8 +54,7 @@ public class DashboardActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Intent intent = new Intent(DashboardActivity.this, AddTravelEventActivity.class);
-                finish();
+                Intent intent = new Intent(DashboardActivity.this, TravelEventAddActivity.class);
                 startActivity(intent);
 
             }
@@ -86,8 +85,6 @@ public class DashboardActivity extends AppCompatActivity {
         finish();
         startActivity(intent);
     }
-
-
     public void imgSlider(int image){
 
 
@@ -102,7 +99,6 @@ public class DashboardActivity extends AppCompatActivity {
         viewFlipper.setInAnimation(this,android.R.anim.slide_out_right);
 
     }
-
     public void dialog_Messenger(){
 
 

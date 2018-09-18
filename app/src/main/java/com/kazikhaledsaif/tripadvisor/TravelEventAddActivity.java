@@ -8,14 +8,10 @@ import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 
-import com.google.firebase.FirebaseApp;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.database.FirebaseDatabase;
-
-import java.time.Month;
 import java.util.Calendar;
 
-public class AddTravelEventActivity extends AppCompatActivity {
+public class TravelEventAddActivity extends AppCompatActivity {
+
 
     EditText mTravelDestinationET,mEstimatedBudgetET,mFromDateET,mToDateET;
     Button mFromDateCalanderBTN,mToDateCalanderBTN,mSaveBTN;
@@ -23,17 +19,14 @@ public class AddTravelEventActivity extends AppCompatActivity {
     private DatePickerDialog datePickerDialog ;
     private Calendar calendar;
 
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_add_travel_event);
-
+        setContentView(R.layout.activity_travel_event_add);
 
         initialization();
         calendarInit();
+
 
 
         mSaveBTN.setOnClickListener(new View.OnClickListener() {
@@ -48,8 +41,6 @@ public class AddTravelEventActivity extends AppCompatActivity {
 
             }
         });
-
-
 
 
     }
@@ -77,7 +68,7 @@ public class AddTravelEventActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 calendar = Calendar.getInstance();
-                datePickerDialog = new DatePickerDialog(AddTravelEventActivity.this, new DatePickerDialog.OnDateSetListener() {
+                datePickerDialog = new DatePickerDialog(TravelEventAddActivity.this, new DatePickerDialog.OnDateSetListener() {
                     @Override
                     public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
                         int current_month= month+1;
@@ -93,7 +84,7 @@ public class AddTravelEventActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 calendar = Calendar.getInstance();
-                datePickerDialog = new DatePickerDialog(AddTravelEventActivity.this, new DatePickerDialog.OnDateSetListener() {
+                datePickerDialog = new DatePickerDialog(TravelEventAddActivity.this, new DatePickerDialog.OnDateSetListener() {
                     @Override
                     public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
                         int current_month= month+1;
