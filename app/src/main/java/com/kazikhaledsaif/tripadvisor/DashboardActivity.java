@@ -18,7 +18,7 @@ public class DashboardActivity extends AppCompatActivity {
 
     private FirebaseAuth mAuth;
     ViewFlipper viewFlipper;
-    LinearLayout mNearBy, mTravelEvent,mWeather;
+    LinearLayout mNearBy, mTravelEvent,mWeather, mProfile;
     Dialog mDialog ;
 
     @Override
@@ -30,7 +30,7 @@ public class DashboardActivity extends AppCompatActivity {
         mNearBy = findViewById(R.id.nearbyBTN);
         mTravelEvent = findViewById(R.id.travelEventBTN);
         mWeather =findViewById(R.id.weatherBTN);
-
+        mProfile = findViewById(R.id.profileLayout);
         mDialog=new Dialog(this);
         int images[] ={ R.drawable.bich, R.drawable.hotel, R.drawable.hilli, R.drawable.del, R.drawable.wallhaven};
         viewFlipper =findViewById(R.id.backgroundimgViewer);
@@ -50,6 +50,14 @@ public class DashboardActivity extends AppCompatActivity {
             }
         });
 
+        mProfile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(DashboardActivity.this, ProfileActivity.class);
+                startActivity(intent);
+
+            }
+        });
 
         mTravelEvent.setOnClickListener(new View.OnClickListener() {
             @Override

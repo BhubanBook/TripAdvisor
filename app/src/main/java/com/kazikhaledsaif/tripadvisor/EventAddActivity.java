@@ -1,6 +1,7 @@
 package com.kazikhaledsaif.tripadvisor;
 
 import android.app.DatePickerDialog;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -49,6 +50,11 @@ public class EventAddActivity extends AppCompatActivity {
                 userId = user.getUid();
                 Event event = new Event(eventId,userId,travelDestination,estimatedBudget,fromDate,toDate);
                 root.child(eventId).setValue(event);
+
+                mTravelDestinationET.setText("");
+                mEstimatedBudgetET.setText("");
+                mFromDateET.setText("");
+                mToDateET.setText("");
 
             }
         });
@@ -105,4 +111,10 @@ public class EventAddActivity extends AppCompatActivity {
                 datePickerDialog.show();
             }
         });}
+
+    public void BackButton(View view) {
+        Intent intent = new Intent(EventAddActivity.this,EventsActivity.class);
+        finish();
+        startActivity(intent);
+    }
 }
