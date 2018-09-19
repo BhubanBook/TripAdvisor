@@ -8,13 +8,16 @@
     tools:layout_editor_absoluteY="25dp">
 
 
-    <!--<Button
+    <Button
         android:id="@+id/skipBTN"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentTop="true"
         android:layout_gravity="right"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
         android:background="@drawable/ic_button_madel_4"
         android:clickable="true"
         android:foreground="?android:attr/selectableItemBackground"
@@ -22,8 +25,10 @@
         android:text="Sign Out"
         android:textColor="#FFFF"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="307dp"
-        tools:layout_editor_absoluteY="16dp" />-->
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.973"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ViewFlipper
         android:id="@+id/backgroundimgViewer"

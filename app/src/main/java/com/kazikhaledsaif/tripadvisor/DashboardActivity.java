@@ -54,7 +54,7 @@ public class DashboardActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Intent intent = new Intent(DashboardActivity.this, TravelEventAddActivity.class);
+                Intent intent = new Intent(DashboardActivity.this, EventsActivity.class);
                 startActivity(intent);
 
             }

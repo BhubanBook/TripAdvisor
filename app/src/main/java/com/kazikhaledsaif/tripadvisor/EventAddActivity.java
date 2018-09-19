@@ -8,17 +8,25 @@ import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.kazikhaledsaif.tripadvisor.POJO.Event;
+
 import java.util.Calendar;
 
-public class TravelEventAddActivity extends AppCompatActivity {
+public class EventAddActivity extends AppCompatActivity {
 
 
     EditText mTravelDestinationET,mEstimatedBudgetET,mFromDateET,mToDateET;
     Button mFromDateCalanderBTN,mToDateCalanderBTN,mSaveBTN;
-    String travelDestination,estimatedBudget,fromDate,toDate;
+    String travelDestination,fromDate,toDate,eventId,userId;
+    Double estimatedBudget;
     private DatePickerDialog datePickerDialog ;
     private Calendar calendar;
-
+    DatabaseReference root;
+    FirebaseUser user;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,18 +34,21 @@ public class TravelEventAddActivity extends AppCompatActivity {
 
         initialization();
         calendarInit();
-
-
+        user= FirebaseAuth.getInstance().getCurrentUser();
+        root = FirebaseDatabase.getInstance().getReference("Events");
 
         mSaveBTN.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
                 travelDestination =  mTravelDestinationET.getText().toString();
-                estimatedBudget = mEstimatedBudgetET.getText().toString();
+                estimatedBudget = Double.parseDouble(mEstimatedBudgetET.getText().toString());
                 fromDate = mFromDateET.getText().toString();
                 toDate = mToDateET.getText().toString();
-
+                eventId = root.push().getKey();
+                userId = user.getUid();
+                Event event = new Event(eventId,userId,travelDestination,estimatedBudget,fromDate,toDate);
+                root.child(eventId).setValue(event);
 
             }
         });
@@ -68,7 +79,7 @@ public class TravelEventAddActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 calendar = Calendar.getInstance();
-                datePickerDialog = new DatePickerDialog(TravelEventAddActivity.this, new DatePickerDialog.OnDateSetListener() {
+                datePickerDialog = new DatePickerDialog(EventAddActivity.this, new DatePickerDialog.OnDateSetListener() {
                     @Override
                     public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
                         int current_month= month+1;
@@ -84,7 +95,7 @@ public class TravelEventAddActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 calendar = Calendar.getInstance();
-                datePickerDialog = new DatePickerDialog(TravelEventAddActivity.this, new DatePickerDialog.OnDateSetListener() {
+                datePickerDialog = new DatePickerDialog(EventAddActivity.this, new DatePickerDialog.OnDateSetListener() {
                     @Override
                     public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
                         int current_month= month+1;

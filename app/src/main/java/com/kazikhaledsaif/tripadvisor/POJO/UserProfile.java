@@ -1,11 +1,13 @@
 package com.kazikhaledsaif.tripadvisor.POJO;
 
 public class UserProfile {
-
-    private  String fullName;
+    private  String userId;
+    private  String userFullName;
     private  String userName;
-    private String password;
-    private String number;
-    private String address;
+    private String userPassword;
+    private String userPhone;
+    private String userAddress;
 
 }
+
+
