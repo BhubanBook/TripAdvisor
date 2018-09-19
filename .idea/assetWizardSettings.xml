@@ -79,9 +79,10 @@
                         </option>
                         <option name="values">
                           <map>
+                            <entry key="assetSourceType" value="FILE" />
                             <entry key="color" value="91dc5a" />
-                            <entry key="outputName" value="ic_calender_icon" />
-                            <entry key="sourceFile" value="C:\Users\PARVE" />
+                            <entry key="outputName" value="ic_sunny2" />
+                            <entry key="sourceFile" value="C:\Users\PARVE\Desktop\sunny2.svg" />
                           </map>
                         </option>
                       </PersistentState>
