@@ -9,10 +9,21 @@
       android:layout_width="match_parent"
       android:id="@+id/eventsRV"
       android:layout_height="match_parent">
-
   </android.support.v7.widget.RecyclerView>
 
-    <android.support.design.widget.FloatingActionButton
+  <io.github.yuweiguocn.lib.squareloading.SquareLoading
+      android:id="@+id/loader"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      app:squareColor="@color/pestGreen"
+      app:squareSize="12dp"
+      app:squareCorner="2dp"
+      app:dividerSize="2dp"
+      app:xCount="4"
+      app:yCount="3"
+      />
+
+  <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -22,6 +33,6 @@
         android:layout_marginRight="20dp"
         android:clickable="true"
         app:fabSize="normal"
-        android:src="@drawable/ic_action_add"
+        android:src="@drawable/ic_add"
         app:elevation="4dp" />
 </RelativeLayout>

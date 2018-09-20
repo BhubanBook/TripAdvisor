@@ -91,11 +91,17 @@
            android:textAppearance="?android:attr/textAppearanceMedium"
            />
 
-       <ProgressBar
+       <io.github.yuweiguocn.lib.squareloading.SquareLoading
            android:id="@+id/loader"
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:layout_centerInParent="true"/>
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           app:squareColor="@color/pestGreen"
+           app:squareSize="12dp"
+           app:squareCorner="2dp"
+           app:dividerSize="2dp"
+           app:xCount="4"
+           app:yCount="3"
+           />
 
 
    </RelativeLayout>

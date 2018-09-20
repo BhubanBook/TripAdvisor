@@ -21,10 +21,12 @@ import java.text.DateFormat;
 import java.util.Date;
 import java.util.Locale;
 
+import io.github.yuweiguocn.lib.squareloading.SquareLoading;
+
 public class WeatherActivity extends AppCompatActivity {
 
     TextView selectCity, cityField, detailsField, currentTemperatureField, humidity_field, pressure_field, weatherIcon, updatedField;
-    ProgressBar loader;
+    SquareLoading loader;
     Typeface weatherFont;
     String city = "Dhaka , BD";
     String OPEN_WEATHER_MAP_API = "c11ce0d04f6389be490cd6acd4631dd0";
@@ -33,7 +35,7 @@ public class WeatherActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_weather);
-        loader = (ProgressBar) findViewById(R.id.loader);
+        loader = findViewById(R.id.loader);
         selectCity = (TextView) findViewById(R.id.selectCity);
         cityField = (TextView) findViewById(R.id.city_field);
         updatedField = (TextView) findViewById(R.id.updated_field);

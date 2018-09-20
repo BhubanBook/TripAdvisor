@@ -27,8 +27,6 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.MyViewHolder
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
         View view = LayoutInflater.from(context).inflate(R.layout.event_row,parent,false);
-
-
         return new MyViewHolder(view);
     }
 
