@@ -38,6 +38,7 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.MyViewHolder
         holder.eventBudgetET.setText(String.format(String.valueOf(event.getEventBudget())));
         holder.eventFormDateET.setText(event.getEventFromDate());
         holder.eventToDateET.setText(event.getEventToDate());
+
     }
 
     @Override
@@ -61,6 +62,8 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.MyViewHolder
             eventFormDateET = itemView.findViewById(R.id.eventFormDateET);
 
             eventToDateET = itemView.findViewById(R.id.eventToDateET);
+
+
         }
     }
 }

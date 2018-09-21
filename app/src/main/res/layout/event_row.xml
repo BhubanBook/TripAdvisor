@@ -1,43 +1,154 @@
 <?xml version="1.0" encoding="utf-8"?>
 
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@drawable/ic_layout_model"
+    android:elevation="8dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp">
 
-    <RelativeLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="125dp"
+        android:padding="5dp"
+        android:orientation="vertical"
+        android:background="@color/pestGreen">
 
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/eventFormDateET"
+            android:gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="12"
+            android:fontFamily="monospace"
+            android:textAlignment="center"
+            android:textSize="25sp"
+            android:textColor="#FFFF"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/fromDateOfMonthTV"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Jun"
+                android:fontFamily="monospace"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:textColor="#FFFF"/>
+            <TextView
+                android:id="@+id/fromDateOfYearTv"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="2018"
+                android:fontFamily="monospace"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:textColor="#FFFF"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="2"
+        android:layout_height="125dp"
+        android:orientation="vertical"
+        android:paddingLeft="10dp">
 
         <TextView
             android:id="@+id/eventNameET"
-            android:text="Event Name"
-            android:textSize="30sp"
+            android:layout_marginTop="10dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-        <TextView
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"
+            android:text="Rangamati"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            />
 
-            android:id="@+id/eventBudgetET"
-            android:text="10000"
-            android:gravity="right"
-            android:layout_below="@id/eventNameET"
-            android:textSize="30sp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_time"
+                android:text="To"
+                android:drawablePadding="3dp"
+                android:fontFamily="monospace"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                />
+            <TextView
+                android:id="@+id/eventToDateET"
+                android:layout_marginLeft="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="24.01.2018"
+                android:textSize="16sp"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_credit_card"
+                android:text="Budget-"
+                android:drawablePadding="3dp"
+                android:fontFamily="monospace"
+                android:textColor="@color/pestGreen"
+                android:textSize="18sp"
+                />
+            <TextView
+                android:id="@+id/eventBudgetET"
+                android:layout_marginLeft="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:textColor="@color/pestGreen"
+                android:text="5000"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:layout_marginLeft="3dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/pestGreen"
+                android:text="TK"
+                android:textSize="18sp"
+                />
+                />
+
+        </LinearLayout>
 
 
-        <TextView
+    </LinearLayout>
 
-            android:id="@+id/eventFormDateET"
-            android:text="1/2/2003"
-            android:layout_below="@id/eventBudgetET"
-            android:textSize="25sp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-        <TextView
 
-            android:id="@+id/eventToDateET"
-            android:text="1/2/2029"
-            android:layout_below="@id/eventFormDateET"
-            android:textSize="25sp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-    </RelativeLayout>
+    </LinearLayout>
