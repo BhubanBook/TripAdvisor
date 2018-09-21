@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/ic_background_img"
+    tools:context=".TravelExpenseActivity">
+
+    <ImageView
+        android:id="@+id/espenceBack"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="10dp"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:clickable="true"
+        android:src="@drawable/ic_left_arrow"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:onClick="espenceBackButton" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Add Expense"
+        android:textColor="#FFFF"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="8dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="horizontal"
+        android:background="@drawable/ic_layout_model">
+
+        <Spinner
+            android:id="@+id/SpinnerBTN"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+        </Spinner>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:elevation="8dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/ic_layout_model">
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:background="@drawable/ic_layout_model"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/expenseDetailsET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:hint="Expense Details "
+                android:inputType="textMultiLine"
+                android:paddingLeft="10dp"
+                android:singleLine="true" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_layout_model">
+            <EditText
+                android:id="@+id/expenseAmountET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:paddingLeft="10dp"
+                android:fontFamily="monospace"
+                android:inputType="numberDecimal"
+                android:hint="Expense Amount" />
+        </android.support.design.widget.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_weight="6"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_layout_model">
+                <EditText
+                    android:id="@+id/expenseDateET"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:paddingLeft="10dp"
+                    android:fontFamily="monospace"
+                    android:inputType="date"
+                    android:hint="Expense Date" />
+            </android.support.design.widget.TextInputLayout>
+            <Button
+                android:id="@+id/expenseCalendarBTN"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/ic_calender_icon" />
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/addExpenseSaveBTN"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/ic_button_madel_3"
+        android:clickable="true"
+        android:drawableRight="@drawable/ic_save_icon"
+        android:fontFamily="monospace"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:paddingLeft="70dp"
+        android:paddingRight="60dp"
+        android:text="Save"
+        android:textColor="#FFFF"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+
+
+</LinearLayout>
