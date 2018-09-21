@@ -23,6 +23,8 @@ import com.kazikhaledsaif.tripadvisor.POJO.Event;
 import java.util.ArrayList;
 import java.util.List;
 
+import io.github.yuweiguocn.lib.squareloading.SquareLoading;
+
 public class EventsActivity extends AppCompatActivity {
 
     Dialog mDialog ;
@@ -30,11 +32,14 @@ public class EventsActivity extends AppCompatActivity {
     RecyclerView recyclerView;
     EventAdapter eventAdapter;
     FirebaseUser user;
+    SquareLoading loader;
     ArrayList<Event> events = new ArrayList<Event>() ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_events);
+        loader = findViewById(R.id.travelloader);
+        loader.setVisibility(View.VISIBLE);
         recyclerView = findViewById(R.id.eventsRV);
         user= FirebaseAuth.getInstance().getCurrentUser();
         String userId = user.getUid();
@@ -45,11 +50,13 @@ public class EventsActivity extends AppCompatActivity {
         Query query = FirebaseDatabase.getInstance().getReference("Events")
                 .orderByChild("userId")
                 .equalTo(userId);
+        query.keepSynced(true);
 
         query.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 events.clear();
+                loader.setVisibility(View.GONE);
                 for(DataSnapshot d : dataSnapshot.getChildren())
                 {
                     Event event = d.getValue(Event.class);

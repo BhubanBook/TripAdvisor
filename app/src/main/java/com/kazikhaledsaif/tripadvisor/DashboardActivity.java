@@ -1,9 +1,6 @@
 package com.kazikhaledsaif.tripadvisor;
 
-import android.app.Dialog;
 import android.content.Intent;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -13,13 +10,14 @@ import android.widget.ViewFlipper;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.kazikhaledsaif.tripadvisor.NearBYMap.MapsActivity;
 
 public class DashboardActivity extends AppCompatActivity {
 
     private FirebaseAuth mAuth;
     ViewFlipper viewFlipper;
     LinearLayout mNearBy, mTravelEvent,mWeather, mProfile;
-    Dialog mDialog ;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,7 +29,7 @@ public class DashboardActivity extends AppCompatActivity {
         mTravelEvent = findViewById(R.id.travelEventBTN);
         mWeather =findViewById(R.id.weatherBTN);
         mProfile = findViewById(R.id.profileLayout);
-        mDialog=new Dialog(this);
+
         int images[] ={ R.drawable.bich, R.drawable.hotel, R.drawable.hilli, R.drawable.del, R.drawable.wallhaven};
         viewFlipper =findViewById(R.id.backgroundimgViewer);
 
@@ -42,11 +40,9 @@ public class DashboardActivity extends AppCompatActivity {
         mNearBy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-            /*    Intent intent = new Intent(DashboardActivity.this, NearbyActivity.class);
-                finish();
-                startActivity(intent);*/
+                Intent intent = new Intent(DashboardActivity.this, MapsActivity.class);
+                startActivity(intent);
 
-                dialog_Messenger();
             }
         });
 
@@ -116,17 +112,7 @@ public class DashboardActivity extends AppCompatActivity {
         viewFlipper.setInAnimation(this,android.R.anim.slide_out_right);
 
     }
-    public void dialog_Messenger(){
 
-
-        //comment
-
-        mDialog.setContentView(R.layout.dialogbox);
-
-
-        mDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-        mDialog.show();
-    }
 
 
 
