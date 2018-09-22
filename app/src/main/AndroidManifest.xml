@@ -25,7 +25,7 @@
         android:theme="@style/AppTheme">
         <activity android:name=".LogInActivity" />
         <activity android:name=".SignUpActivity" />
-        <activity android:name=".ProfileActivity" />
+        <activity android:name=".AddProfileActivity" />
         <activity android:name=".DashboardActivity" />
         <activity android:name=".SplashScreenActivity">
             <intent-filter>
@@ -52,7 +52,8 @@
         <activity
             android:name=".NearBYMap.MapsActivity"
             android:label="@string/title_activity_maps" />
-        <activity android:name=".TravelExpenseActivity"></activity>
+        <activity android:name=".TravelExpenseActivity" />
+        <activity android:name=".ProfileActivity"></activity>
     </application>
 
 </manifest>
