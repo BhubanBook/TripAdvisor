@@ -3,92 +3,124 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-
     android:layout_height="match_parent"
-    tools:context=".ProfileActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@drawable/ic_background_img"
+    tools:context=".ProfileActivity">
 
-    <ImageView
-        android:id="@+id/SkipBTN"
-        android:layout_marginTop="15dp"
-        android:layout_marginRight="10dp"
-        android:layout_gravity="right"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:onClick="Skip"
-        android:src="@drawable/ic_logout1"
-        android:foreground="?android:attr/selectableItemBackground"
-        android:clickable="true" />
     <TextView
-        android:layout_marginTop="20dp"
+
         android:layout_width="wrap_content"
-        android:text="Add Profile Photo"
+        android:text="Profile"
         android:textSize="25sp"
-        android:fontFamily="serif-monospace"
         android:textStyle="bold"
+        android:layout_marginTop="30dp"
+        android:textColor="#ffff"
         android:layout_gravity="center"
         android:layout_height="wrap_content" />
     <ImageView
-        android:id="@+id/PictureIV"
+        android:id="@+id/profilePictureIV"
         android:background="@drawable/ic_button_madel_5"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:layout_width="150dp"
+        android:elevation="8dp"
         android:layout_height="150dp"
         android:scaleType="centerCrop"
         android:layout_gravity="center"/>
-
-
     <LinearLayout
-        android:layout_marginTop="80dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:background="@drawable/ic_layout_model"
+        android:orientation="horizontal"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="10dp"
+        android:paddingLeft="10dp"
+        android:elevation="8dp"
+        android:layout_marginLeft="10dp">
 
-        <Button
-            android:id="@+id/takePhotoBTN"
+        <LinearLayout
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="80dp"
-            android:paddingLeft="25dp"
-            android:drawableLeft="@drawable/ic_camera_icon"
-            android:background="@drawable/ic_button_madel_4" />
+            android:padding="5dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:background="@color/pestGreen">
 
-        <Button
-            android:id="@+id/galleryBTN"
+            <ImageView
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_user_icon2"/>
+
+            <ImageView
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_email2"/>
+
+            <ImageView
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_phone_iphone"/>
+
+            <ImageView
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_location"/>
+
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="0dp"
-            android:layout_weight="2"
+            android:layout_weight="4"
             android:layout_height="wrap_content"
-            android:layout_marginRight="80dp"
-            android:layout_marginLeft="10dp"
-            android:paddingLeft="60dp"
-            android:drawableLeft="@drawable/ic_gallery_icon"
-            android:background="@drawable/ic_button_madel_2" />
+            android:orientation="vertical"
+            android:paddingLeft="10dp">
+
+            <TextView
+                android:id="@+id/profileFullNameTV"
+                android:layout_width="wrap_content"
+                android:text="Name"
+                android:textSize="20sp"
+                android:layout_marginTop="20dp"
+                android:paddingLeft="10dp"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/profileEmailTV"
+                android:layout_width="wrap_content"
+                android:text="E-mail"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"
+                android:paddingLeft="10dp"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/profilePhoneNOTV"
+                android:layout_width="wrap_content"
+                android:text="Phone Number"
+                android:textSize="18sp"
+                android:textColor="@color/pestGreen"
+                android:layout_marginTop="20dp"
+                android:paddingLeft="10dp"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/profileAddressTV"
+                android:layout_width="wrap_content"
+                android:text="Address"
+                android:textSize="18sp"
+                android:layout_marginTop="20dp"
+                android:paddingLeft="10dp"
+                android:layout_marginBottom="20dp"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+
     </LinearLayout>
-
-
-    <Button
-        android:id="@+id/photoSaveBTN"
-        android:background="@drawable/ic_button_madel_3"
-        android:layout_marginTop="10dp"
-        android:text="Save"
-        android:paddingLeft="70dp"
-        android:paddingRight="60dp"
-        android:textSize="18sp"
-        android:textColor="#FFFF"
-        android:textStyle="bold"
-        android:fontFamily="monospace"
-        android:layout_marginRight="40dp"
-        android:layout_marginLeft="40dp"
-        android:foreground="?android:attr/selectableItemBackground"
-        android:clickable="true"
-        android:drawableRight="@drawable/ic_save_icon"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-
-
-
-
 
 
 </LinearLayout>
