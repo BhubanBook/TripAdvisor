@@ -64,14 +64,14 @@ public class SignUpActivity extends AppCompatActivity {
                                 Log.e(TAG, "createUserWithEmail:success");
 
                                 FirebaseUser user = mAuth.getCurrentUser();
-                               Intent intent = new Intent(SignUpActivity.this, ProfileActivity.class);
+                                Intent intent = new Intent(SignUpActivity.this, ProfileActivity.class);
                                 finish();
                                 startActivity(intent);
                             } else {
                                 // If sign in fails, display a message to the user.
                                 Log.e(TAG, "createUserWithEmail:failure", task.getException());
-                                Toast.makeText(SignUpActivity.this, "Authentication failed.",
-                                        Toast.LENGTH_SHORT).show();
+                                Toast.makeText(SignUpActivity.this, "Email already Exists",
+                                        Toast.LENGTH_LONG).show();
 
                             }
 

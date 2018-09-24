@@ -12,7 +12,7 @@
   </android.support.v7.widget.RecyclerView>
 
   <io.github.yuweiguocn.lib.squareloading.SquareLoading
-      android:id="@+id/loader"
+      android:id="@+id/travelloader"
       android:layout_width="match_parent"
       android:layout_height="match_parent"
       app:squareColor="@color/pestGreen"

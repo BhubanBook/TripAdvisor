@@ -15,6 +15,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.kazikhaledsaif.tripadvisor.POJO.Event;
 
+import java.text.DateFormat;
 import java.util.Calendar;
 
 public class EventAddActivity extends AppCompatActivity {
@@ -89,10 +90,13 @@ public class EventAddActivity extends AppCompatActivity {
                     @Override
                     public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
                         int current_month= month+1;
-                        mFromDateET.setText(dayOfMonth +" / "+current_month+" / "+year);
+                        String currentDate = DateFormat.getDateInstance(DateFormat.MEDIUM).format(calendar.getTime());
+                        mFromDateET.setText(currentDate);
+                        //mFromDateET.setText(dayOfMonth +" / "+current_month+" / "+year);
                     }
                 },calendar.get(Calendar.YEAR),calendar.get(Calendar.MONTH),calendar.get(Calendar.DAY_OF_MONTH));
                 datePickerDialog.show();
+
             }
         });
 
@@ -105,7 +109,9 @@ public class EventAddActivity extends AppCompatActivity {
                     @Override
                     public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
                         int current_month= month+1;
-                        mToDateET.setText(dayOfMonth +" / "+current_month+" / "+year);
+                        String currentDate = DateFormat.getDateInstance(DateFormat.MEDIUM).format(calendar.getTime());
+                        mToDateET.setText(currentDate);
+                       // mToDateET.setText(dayOfMonth +" / "+current_month+" / "+year);
                     }
                 },calendar.get(Calendar.YEAR),calendar.get(Calendar.MONTH),calendar.get(Calendar.DAY_OF_MONTH));
                 datePickerDialog.show();
