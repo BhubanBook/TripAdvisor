@@ -4,16 +4,27 @@ public class Expense {
 
     private String expanseId;
     private String userId;
+
+    private String eventName;
     private String expanseDetails;
     private double expanseAmount;
     private String expanseDate;
 
-    public Expense(String expanseId, String userId, String expanseDetails, double expanseAmount, String expanseDate) {
+    public Expense(String expanseId, String userId, String eventName, String expanseDetails, double expanseAmount, String expanseDate) {
         this.expanseId = expanseId;
         this.userId = userId;
+        this.eventName = eventName;
         this.expanseDetails = expanseDetails;
         this.expanseAmount = expanseAmount;
         this.expanseDate = expanseDate;
+    }
+
+    public String getEventName() {
+        return eventName;
+    }
+
+    public void setEventName(String eventName) {
+        this.eventName = eventName;
     }
 
     public Expense() {

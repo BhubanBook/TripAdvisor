@@ -70,7 +70,7 @@ public class DashboardActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Intent intent = new Intent(DashboardActivity.this, TravelExpenseActivity.class);
+                Intent intent = new Intent(DashboardActivity.this, ExpenseActivity.class);
                 startActivity(intent);
 
             }
