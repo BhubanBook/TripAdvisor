@@ -1,29 +1,128 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="wrap_content">
-
-    <TextView
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="30sp"
-        android:id="@+id/expenseDetailsTV"
-        android:text="Expense Details"/>
+        android:orientation="horizontal"
+        android:background="@drawable/ic_layout_model"
+        android:elevation="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
 
-    <TextView
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="125dp"
+            android:padding="5dp"
+            android:orientation="vertical"
+            android:background="@color/pestGreen">
 
-        android:id="@+id/expenseAmountTV"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="30sp"
-        android:text="Expense Amount"/>
 
-    <TextView
+            <TextView
+                android:id="@+id/expenseTimeTV"
+                android:gravity="center"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="12"
+                android:fontFamily="monospace"
+                android:textAlignment="center"
+                android:textSize="25sp"
+                android:textColor="#FFFF"/>
 
-        android:id="@+id/expenseTimeTV"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="30sp"
-        android:text="Expense Time"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
 
-</LinearLayout>
+                <TextView
+                    android:id="@+id/fromDateOfMonthTV"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Jun"
+                    android:fontFamily="monospace"
+                    android:textAlignment="center"
+                    android:textSize="18sp"
+                    android:textColor="#FFFF"/>
+                <TextView
+                    android:id="@+id/fromDateOfYearTv"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="2018"
+                    android:fontFamily="monospace"
+                    android:textAlignment="center"
+                    android:textSize="18sp"
+                    android:textColor="#FFFF"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="125dp"
+            android:orientation="vertical"
+            android:paddingLeft="10dp">
+
+            <TextView
+                android:id="@+id/expenseDetailsTV"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:text="Rangamati"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_credit_card"
+                    android:text="Expense-"
+                    android:drawablePadding="3dp"
+                    android:fontFamily="monospace"
+                    android:textColor="@color/pestGreen"
+                    android:textSize="18sp"
+                    />
+                <TextView
+                    android:id="@+id/expenseAmountTV"
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="monospace"
+                    android:textColor="@color/pestGreen"
+                    android:text="5000"
+                    android:textSize="18sp"/>
+
+                <TextView
+                    android:layout_marginLeft="3dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/pestGreen"
+                    android:text="TK"
+                    android:textSize="18sp"
+                    />
+                />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+

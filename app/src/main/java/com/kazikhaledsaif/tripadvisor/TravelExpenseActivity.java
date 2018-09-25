@@ -145,9 +145,9 @@ public class TravelExpenseActivity extends AppCompatActivity {
 
     }
 
-    public void espenceBackButton(View view) {
+
+    public void expenceButton(View view) {
         Intent intent = new Intent(TravelExpenseActivity.this,DashboardActivity.class);
-        finish();
         startActivity(intent);
     }
 }

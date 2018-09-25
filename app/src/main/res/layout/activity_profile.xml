@@ -8,16 +8,31 @@
     android:background="@drawable/ic_background_img"
     tools:context=".ProfileActivity">
 
-    <TextView
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/Back"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:clickable="true"
+            android:src="@drawable/ic_left_arrow"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:onClick="profileBackButton" />
 
-        android:layout_width="wrap_content"
-        android:text="Profile"
-        android:textSize="25sp"
-        android:textStyle="bold"
-        android:layout_marginTop="30dp"
-        android:textColor="#ffff"
-        android:layout_gravity="center"
-        android:layout_height="wrap_content" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:text="Profile"
+            android:textColor="#FFFF"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
     <ImageView
         android:id="@+id/profilePictureIV"
         android:background="@drawable/ic_button_madel_5"

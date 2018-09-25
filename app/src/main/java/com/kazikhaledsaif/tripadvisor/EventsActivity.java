@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.widget.ImageView;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -33,11 +34,21 @@ public class EventsActivity extends AppCompatActivity {
     EventAdapter eventAdapter;
     FirebaseUser user;
     SquareLoading loader;
+    ImageView backbtn;
     ArrayList<Event> events = new ArrayList<Event>() ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_events);
+        backbtn =findViewById(R.id.eventBackbtn);
+        backbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(EventsActivity.this,DashboardActivity.class);
+                finish();
+                startActivity(intent);
+            }
+        });
         loader = findViewById(R.id.travelloader);
         loader.setVisibility(View.VISIBLE);
         recyclerView = findViewById(R.id.eventsRV);
@@ -75,9 +86,6 @@ public class EventsActivity extends AppCompatActivity {
             }
         });
 
-
-
-
         FloatingActionButton fab =  findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -89,5 +97,11 @@ public class EventsActivity extends AppCompatActivity {
             }
         });
     }
+
+
+
+
+
+
 
 }

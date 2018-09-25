@@ -7,6 +7,24 @@
     android:background="@drawable/www"
     tools:context=".WeatherActivity">
 
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/Back"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:clickable="true"
+            android:src="@drawable/ic_left_arrow"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:onClick="weatherBackButton" />
+
+
+    </RelativeLayout>
+
    <RelativeLayout
        android:layout_width="match_parent"
        android:layout_height="match_parent"

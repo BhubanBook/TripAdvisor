@@ -4,11 +4,15 @@ import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextUtils;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 
+import com.firebase.ui.auth.util.ui.BucketedTextChangeListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
@@ -23,45 +27,70 @@ public class EventAddActivity extends AppCompatActivity {
 
     EditText mTravelDestinationET,mEstimatedBudgetET,mFromDateET,mToDateET;
     Button mFromDateCalanderBTN,mToDateCalanderBTN,mSaveBTN;
-    String travelDestination,fromDate,toDate,eventId,userId;
+    String travelDestination,fromDate,toDate,eventId,userId,money;
     Double estimatedBudget;
     private DatePickerDialog datePickerDialog ;
     private Calendar calendar;
     DatabaseReference root;
     FirebaseUser user;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_travel_event_add);
-
         initialization();
         calendarInit();
         user= FirebaseAuth.getInstance().getCurrentUser();
         root = FirebaseDatabase.getInstance().getReference("Events");
 
-        mSaveBTN.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+   /*     if(TextUtils.isEmpty(travelDestination)){
 
-                travelDestination =  mTravelDestinationET.getText().toString();
-                estimatedBudget = Double.parseDouble(mEstimatedBudgetET.getText().toString());
-                fromDate = mFromDateET.getText().toString();
-                toDate = mToDateET.getText().toString();
-                eventId = root.push().getKey();
-                userId = user.getUid();
-                Event event = new Event(eventId,userId,travelDestination,estimatedBudget,fromDate,toDate);
-                root.child(eventId).setValue(event);
+            mTravelDestinationET.setError("Fill is Empty");
+            return;
+        }
+        if(TextUtils.isEmpty(money)){
 
-                mTravelDestinationET.setText("");
-                mEstimatedBudgetET.setText("");
-                mFromDateET.setText("");
-                mToDateET.setText("");
+            mEstimatedBudgetET.setError("Fill is Empty");
+            return;
+        }
+        if(TextUtils.isEmpty(fromDate)){
 
-            }
-        });
+            mFromDateET.setError("Fill is Empty");
+            return;
+        }
+        if(TextUtils.isEmpty(toDate)){
+
+            mToDateET.setError("Fill is Empty");
+            return;
+        }
+
+        else
+        {*/
+            mSaveBTN.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    travelDestination =  mTravelDestinationET.getText().toString();
+                    estimatedBudget = Double.parseDouble(mEstimatedBudgetET.getText().toString());
+                    money =String.valueOf(estimatedBudget);
+                    fromDate = mFromDateET.getText().toString();
+                    toDate = mToDateET.getText().toString();
+                    eventId = root.push().getKey();
+                    userId = user.getUid();
+                    Event event = new Event(eventId,userId,travelDestination,estimatedBudget,fromDate,toDate);
+                    root.child(eventId).setValue(event);
+                    mTravelDestinationET.setText("");
+                    mEstimatedBudgetET.setText("");
+                    mFromDateET.setText("");
+                    mToDateET.setText("");
+
+                }
+            });
+        }
 
 
-    }
+
+
+   // }
 
 
 
@@ -117,10 +146,9 @@ public class EventAddActivity extends AppCompatActivity {
                 datePickerDialog.show();
             }
         });}
-
     public void BackButton(View view) {
         Intent intent = new Intent(EventAddActivity.this,EventsActivity.class);
-        finish();
         startActivity(intent);
     }
+
 }

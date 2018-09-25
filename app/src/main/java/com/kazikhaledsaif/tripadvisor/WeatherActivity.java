@@ -2,6 +2,7 @@ package com.kazikhaledsaif.tripadvisor;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
@@ -91,6 +92,10 @@ public class WeatherActivity extends AppCompatActivity {
         }
     }
 
+    public void weatherBackButton(View view) {
+        Intent intent = new Intent(WeatherActivity.this,DashboardActivity.class);
+        startActivity(intent);
+    }
 
 
     class DownloadWeather extends AsyncTask< String, Void, String > {

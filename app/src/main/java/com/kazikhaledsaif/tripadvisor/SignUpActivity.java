@@ -83,4 +83,8 @@ public class SignUpActivity extends AppCompatActivity {
 
     }
 
+    public void signUpBackButton(View view) {
+        Intent intent = new Intent(SignUpActivity.this,DashboardActivity.class);
+        startActivity(intent);
+    }
 }
