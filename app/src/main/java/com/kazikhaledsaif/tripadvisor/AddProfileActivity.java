@@ -16,6 +16,11 @@ import android.widget.EditText;
 import android.widget.ImageView;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.kazikhaledsaif.tripadvisor.POJO.Event;
+import com.kazikhaledsaif.tripadvisor.POJO.UserProfile;
 
 import java.io.ByteArrayOutputStream;
 
@@ -26,7 +31,9 @@ public class AddProfileActivity extends AppCompatActivity {
     private Button mPhotoBTN, mGalleryBTN, mSaveBTN;
     private String TAG = "Firebase";
     private FirebaseAuth mAuth;
-    private String mPhotoData;
+    private String mPhotoData,userId,profileId,FullName,PhoneNO,Address;
+    DatabaseReference root;
+    FirebaseUser user;
 
 
     static final int REQUEST_IMAGE_CAPTURE = 1;
@@ -37,7 +44,9 @@ public class AddProfileActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile_add);
-        mAuth = FirebaseAuth.getInstance();
+        user= FirebaseAuth.getInstance().getCurrentUser();
+        root = FirebaseDatabase.getInstance().getReference("User");
+
 
         mFullNameET = findViewById(R.id.profileFullNameET);
         mPhoneNoET = findViewById(R.id.profilePhoneNoET);
@@ -91,10 +100,22 @@ public class AddProfileActivity extends AppCompatActivity {
     }
 
 
-    public void Save(View view) {
-        String FullName = mFullNameET.getText().toString();
-        String PhoneNO = mPhoneNoET.getText().toString();
-        String Address = mAddressET.getText().toString();
+    public void profileSaveBTN(View view) {
+        FullName = mFullNameET.getText().toString();
+        PhoneNO = mPhoneNoET.getText().toString();
+        Address = mAddressET.getText().toString();
+        profileId = root.push().getKey();
+        userId = user.getUid();
+        UserProfile userProfile = new UserProfile(userId,profileId,FullName,PhoneNO,Address);
+        root.child(profileId).setValue(userProfile);
+        mFullNameET.setText("");
+        mPhoneNoET.setText("");
+        mAddressET.setText("");
+
+        Intent intent = new Intent(AddProfileActivity.this, DashboardActivity.class);
+        finish();
+        startActivity(intent);
+
     }
 
 
