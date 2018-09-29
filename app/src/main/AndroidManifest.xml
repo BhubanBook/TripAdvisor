@@ -53,8 +53,10 @@
             android:name=".NearBYMap.MapsActivity"
             android:label="@string/title_activity_maps" />
         <activity android:name=".TravelExpenseActivity" />
-        <activity android:name=".ExpenseActivity"></activity>
-        <activity android:name=".AddProfileActivity"></activity>
+        <activity android:name=".ExpenseActivity" />
+        <activity android:name=".AddProfileActivity" />
+        <activity android:name=".AddMomentsActivity" />
+        <activity android:name=".MomentsActivity"></activity>
     </application>
 
 </manifest>

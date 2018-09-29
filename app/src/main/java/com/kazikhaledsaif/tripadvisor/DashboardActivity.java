@@ -94,6 +94,8 @@ public class DashboardActivity extends AppCompatActivity {
         mMoment.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Intent intent = new Intent(DashboardActivity.this, AddMomentsActivity.class);
+                startActivity(intent);
 
 
 

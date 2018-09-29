@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -26,6 +28,7 @@ public class ProfileActivity extends AppCompatActivity {
     FirebaseUser user;
     DatabaseReference root;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,19 +41,19 @@ public class ProfileActivity extends AppCompatActivity {
         mProfileImg = findViewById(R.id.profilePictureIV);
         user= FirebaseAuth.getInstance().getCurrentUser();
         final String userId = user.getUid();
-        Query query = FirebaseDatabase.getInstance().getReference("User")
-                .orderByChild("userId")
-                .equalTo(userId);
-        query.keepSynced(true);
 
-        query.addValueEventListener(new ValueEventListener() {
+        ProfileData.Address = user.getEmail();
+        DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("User/"+userId);
+
+
+        databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
-                UserProfile userProfile = dataSnapshot.getValue(UserProfile.class);
-                mName.setText(userProfile.getUserFullName());
-                mPhoneNo.setText(userProfile.getUserPhone());
-                mAddress.setText(userProfile.getUserAddress());
+                mName.setText(dataSnapshot.child("userFullName").getValue().toString());
+              /*  mPhoneNo.setText(ProfileData.PhoneNumber);
+                mAddress.setText(ProfileData.Address);
+                mEmail.setText(ProfileData.Email);*/
 
             }
 
@@ -59,6 +62,8 @@ public class ProfileActivity extends AppCompatActivity {
 
             }
         });
+
+
 
 
 
