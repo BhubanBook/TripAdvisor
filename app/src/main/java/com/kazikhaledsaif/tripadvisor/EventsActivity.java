@@ -56,7 +56,7 @@ public class EventsActivity extends AppCompatActivity {
         String userId = user.getUid();
         eventAdapter = new EventAdapter(EventsActivity.this,events);
         RecyclerView.LayoutManager manager = new LinearLayoutManager(EventsActivity.this,LinearLayoutManager.VERTICAL,false);
-      recyclerView.setLayoutManager(manager);
+        recyclerView.setLayoutManager(manager);
         recyclerView.setAdapter(eventAdapter);
         Query query = FirebaseDatabase.getInstance().getReference("Events")
                 .orderByChild("userId")

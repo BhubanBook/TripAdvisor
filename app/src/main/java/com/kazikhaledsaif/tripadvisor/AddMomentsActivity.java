@@ -164,7 +164,7 @@ public class AddMomentsActivity extends AppCompatActivity {
 
         if (!TextUtils.isEmpty(details) && !imageData.isEmpty()) {
             //Do firebase code here
-          String  key = rootReference.push().getKey();
+            String  key = rootReference.push().getKey();
             String eventKey =mSpinner.getSelectedItem().toString();
             Moments moment = new Moments(imageData,details,key,eventKey);
             rootReference.child("Moment").child(key).setValue(moment).addOnCompleteListener(new OnCompleteListener<Void>() {

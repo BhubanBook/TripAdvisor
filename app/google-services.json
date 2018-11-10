@@ -1,38 +1,35 @@
 {
   "project_info": {
-    "project_number": "1049619641427",
-    "firebase_url": "https://tripadvisor-44487.firebaseio.com",
-    "project_id": "tripadvisor-44487",
-    "storage_bucket": "tripadvisor-44487.appspot.com"
+    "project_number": "948497563105",
+    "firebase_url": "https://trip-guide-9447f.firebaseio.com",
+    "project_id": "trip-guide-9447f",
+    "storage_bucket": "trip-guide-9447f.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1049619641427:android:dfef1a2a85295eec",
+        "mobilesdk_app_id": "1:948497563105:android:dfef1a2a85295eec",
         "android_client_info": {
           "package_name": "com.kazikhaledsaif.tripadvisor"
         }
       },
       "oauth_client": [
         {
-          "client_id": "1049619641427-jm2a0jfm1jvgr0gu6iem8an5lnct8ghj.apps.googleusercontent.com",
+          "client_id": "948497563105-mqlun8lqj23ka0gvj5q96hrm70q324td.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.kazikhaledsaif.tripadvisor",
-            "certificate_hash": "d749b144ee809369751aeee944da7d29eee8cdeb"
+            "certificate_hash": "ef6723c653fd01996ae6c1b46c180c8157a65194"
           }
         },
         {
-          "client_id": "1049619641427-iok3hn74du1tcvjipdcqm2crjqak51h0.apps.googleusercontent.com",
+          "client_id": "948497563105-mrkollsh1n63a70dn9jloe4ujajd6h1v.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDeNDCtpF8lziWZeR5Ym3yOVHqEswbkq3I"
-        },
-        {
-          "current_key": "AIzaSyDY3nik9EFqXr1Yz3KqPcC2w_TciHVueYg"
+          "current_key": "AIzaSyBOqdYbA1ZnQ0NMc-nB8Ig01jlHkGOWR8s"
         }
       ],
       "services": {
@@ -43,7 +40,51 @@
           "status": 2,
           "other_platform_oauth_client": [
             {
-              "client_id": "1049619641427-iok3hn74du1tcvjipdcqm2crjqak51h0.apps.googleusercontent.com",
+              "client_id": "948497563105-mrkollsh1n63a70dn9jloe4ujajd6h1v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:948497563105:android:9bf9a9f644ce6ef0",
+        "android_client_info": {
+          "package_name": "parvez.tripguid.com.tripguide"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "948497563105-5el7vg150rgj4q336bpvdafth8j1l2ql.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "parvez.tripguid.com.tripguide",
+            "certificate_hash": "ef6723c653fd01996ae6c1b46c180c8157a65194"
+          }
+        },
+        {
+          "client_id": "948497563105-mrkollsh1n63a70dn9jloe4ujajd6h1v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBOqdYbA1ZnQ0NMc-nB8Ig01jlHkGOWR8s"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "948497563105-mrkollsh1n63a70dn9jloe4ujajd6h1v.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
